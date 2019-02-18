@@ -4,7 +4,7 @@
 		"name": "Eminent Amenities brochure",
 		"img": "eminent.jpg",
 		"gallery": ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"]
-    },
+    	},
 	{
 		"id": 2,
 		"name": "Net Pulz brochure",
