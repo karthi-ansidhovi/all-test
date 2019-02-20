@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="">
+
+	<div style="position: fixed; top: 15px;" id="x-axis"></div>
+	<div style="position: fixed; top: 35px;" id="y-axis"></div>
+
+	<script type="text/javascript">
+		var x = document.getElementById('x-axis');
+		var y = document.getElementById('y-axis');
+		window.addEventListener('scroll', function(){
+			x.innerHTML = window.pageXOffset;
+			y.innerHTML = window.pageYOffset;
+		});
+
+		var body = document.getElementsByTagName('body');
+		console.log(body[0].style);
+		body[0].style.cssText = "min-height: 5000px; min-width: 5000px;";
+	</script>
+
+</body>
+</html>
