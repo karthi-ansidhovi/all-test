@@ -9,7 +9,7 @@
 		function getHtml( parentElement, file )
 		{
 			var client = new XMLHttpRequest();
-			client.open('GET', 'a.html');
+			client.open('GET', file);
 			client.onreadystatechange = function() {
 				document.querySelector(parentElement).innerHTML = client.responseText;
 			}
