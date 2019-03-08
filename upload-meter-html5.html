@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<meter min="0" max="10"></meter>
+	<br>
+	<progress max="10">
+
+	<script type="text/javascript">
+		var i = 0;
+		setInterval(function(){
+			i++;
+			var meter = document.getElementsByTagName('meter');
+			var progress = document.getElementsByTagName('progress');
+			console.log(meter);
+			meter[0].setAttribute('value',i);
+			progress[0].setAttribute('value',i);
+			if (i >= 10) {
+				i = 0;
+			}
+		}, 100);
+	</script>
+
+</body>
+</html>
