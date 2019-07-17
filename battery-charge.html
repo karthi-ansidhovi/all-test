@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css">
+
+	<title>HTM SURVEY</title>
+</head>
+<body>
+	<div id="battery" class="d-flex justify-content-center align-items-center vh-100">
+		<i class="fa fa-4x fa-rotate-270 text-success fa-battery-full" aria-hidden="true"></i>
+	</div>
+	<script type="text/javascript">
+		function charge(){
+			var i = 0;
+			var c = setInterval(battery, 500);
+			function battery() {
+				switch (i) {
+					case 0:
+					document.getElementById('battery').innerHTML = '<i class="fa fa-4x fa-rotate-270 text-success fa-battery-empty" aria-hidden="true"></i>';
+					break;
+
+					case 1:
+					document.getElementById('battery').innerHTML = '<i class="fa fa-4x fa-rotate-270 text-success fa-battery-quarter" aria-hidden="true"></i>';
+					break;
+
+					case 2:
+					document.getElementById('battery').innerHTML = '<i class="fa fa-4x fa-rotate-270 text-success fa-battery-half" aria-hidden="true"></i>';
+					break;
+
+					case 3:
+					document.getElementById('battery').innerHTML = '<i class="fa fa-4x fa-rotate-270 text-success fa-battery-three-quarters" aria-hidden="true"></i>';
+					break;
+
+					case 4:
+					document.getElementById('battery').innerHTML = '<i class="fa fa-4x fa-rotate-270 text-success fa-battery-full" aria-hidden="true"></i>';
+					break;
+
+					default:
+					clearInterval(c);
+					charge();
+					document.getElementById('battery').innerHTML = '<i class="fa fa-4x fa-rotate-270 text-success fa-battery-empty" aria-hidden="true"></i>';
+					break;
+				}
+				i++;
+			}
+		}
+		charge();
+	</script>
+</body>
+</html>
